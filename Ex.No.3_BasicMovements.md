@@ -1,6 +1,6 @@
 # Ex.No: 3  Basic movements in Unity 
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE:            26-10-2026                                                                
+### REGISTER NUMBER : 212225040007
 ### AIM: 
  To learn the basic movements translation,scaling and rotation of game objects through code.
 ### Procedure:
@@ -17,50 +17,52 @@
 11. Stop the program.
 ### Program 
 ```
+
 using UnityEngine;
+
 public class TransformOperations : MonoBehaviour
 {
     public Transform object1; // Object for translation
     public Transform object2; // Object for rotation
     public Transform object3; // Object for scaling
 
-    public float moveSpeed = 2f;  // Speed of translation
-    public float rotateSpeed = 50f; // Speed of rotation
-    public float scaleSpeed = 0.5f; // Speed of scaling
+    public float moveSpeed = 2f;
+    public float rotateSpeed = 50f;
+    public float scaleSpeed = 0.5f;
 
     void Update()
     {
-        // Translate (Move) object1 along the X-axis- Time.deltaTime to make movement smooth across all frame rates
+        // Translation along X-axis
         if (object1 != null)
         {
-           // object1.position += Vector3.right * moveSpeed;
-               object1.Translate(0.02f,0,0);
-
+            object1.Translate(0.02f, 0f, 0f);
         }
 
-        // Rotate object2 around the Y-axis
+        // Rotation around Y-axis
         if (object2 != null)
         {
-            //object2.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
-            //object2.Rotate(0,0.02f.0);
+            object2.Rotate(0f, 0.02f, 0f);
         }
 
-        // Scale object3 up and down
+        // Scaling along X and Y axes
         if (object3 != null)
         {
-           // float scaleChange = Mathf.PingPong(Time.time * scaleSpeed, 1f) + 0.5f; // generates a value that moves back and forth between 0 and length
-           // object3.localScale = new Vector3(scaleChange, scaleChange, scaleChange);
-            object3.localScale+=new Vector3(0.02f.0.02f,0);
-
+            object3.localScale += new Vector3(0.02f, 0.02f, 0f);
         }
     }
 }
+
 ```
 ### Output:
 
 
+<img width="1380" height="625" alt="image" src="https://github.com/user-attachments/assets/27d26bc1-7e60-43a8-810a-849975f52d8b" />
 
 
+<img width="1394" height="609" alt="image" src="https://github.com/user-attachments/assets/d08dd349-e49f-4750-8bf2-5801d645f1c3" />
+
+
+<img width="769" height="450" alt="image" src="https://github.com/user-attachments/assets/c8ea6827-03ca-48b9-8506-26977807bfc2" />
 
 
 
